@@ -10,12 +10,21 @@ impl Rectangle {
     }
 }
 
+pub fn add_two(a: i32) -> i32 {
+    internal_adder(a, 2)
+}
+fn internal_adder(a: i32, b: i32) -> i32  {
+    a + b
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     // #[should_panic(expected = "I expected error")]    
+    #[ignore]
     fn larger_can_hold_smaller() {
         let larger = Rectangle {
             width: 8,
